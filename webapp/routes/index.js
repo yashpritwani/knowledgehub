@@ -44,24 +44,21 @@ userdetails.save(function(err , res1){
     res.render('myweb',{records:data});
 });
 });
-router.post('/login/', function(req,res,next) {
+});
+router.post('/login/', function(req,res) {
   console.log(req.body.email);
 var fltrEmail = req.body.email;
 var fltrPass = req.body.password;
-
 if(fltrEmail != '' && fltrPass != '' ){
   var fltrParam = { $and:[{ email:fltrEmail },{ password:fltrPass }]};
 }
 else{
   var fltrParam ={};
 }
-var userfilter = usrmdl.find( fltrParam );
-    userfilter.exec(function(err , data){
+var userfilter = usrmdl.findOne( fltrParam );
+    userfilter.exec((err , data )=>{
       if(err) throw err;
-      console.log(data);
       res.render('lrslt',{records:data});
-  });
+    });
 });
-});
-
 module.exports = router;
