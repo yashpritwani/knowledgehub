@@ -1,0 +1,60 @@
+
+<html>
+<head><title>Knowledge Hub </title>
+<link rel="stylesheet" href='/stylesheets/design.css'>
+</head>
+<body>
+   <script src=""></script>
+<h3><strong>NOBODY PROVIDES IT BETTER BUT</strong></h3>
+<div class="logo">
+<img src="/images/logo2.PNG" alt="logo2.PNG" height="300" width="400">
+</div>
+<div class="slider"></div>
+<ul class="nav" style=" margin-right: 85%; margin-top: 20px;" >
+   <li class="new">
+      <a class="nav" href="./myweb"><strong>HOME</strong></a>
+   </li>
+   <li class="new">
+      <a class="nav" href="./login"><strong>LOGIN</strong></a>
+   </li>
+   <li class="new">
+      <a class="nav" href="./signup"><strong>SIGNUP</strong></a>
+   </li>
+   <li class="new">
+      <a class="nav disable" href="a" tabindex="-1" aria-disabled="true"><strong>PROFILE</strong></a>
+   </li>
+</ul> 
+<p></p>
+<iframe width="400" height="200" src="https://www.youtube.com/embed/rooTTKmhWz8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p></p>
+<p></p>
+<p></p>
+<table class = "table">
+<thead>
+<tr>
+<th>NAME</th>
+<th>EMAIL</th>
+<th>CNTCT NMBR</th>
+<th>DATE OF BIRTH</th>
+<th>RANDOM NMBR</th>
+</tr>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th>(ddmmyyyy)</th>
+<th>(RN)</th>
+</tr>
+<% records.forEach(function(row){ %>
+   <tr>
+     <td><%= row.name %></td>
+     <td><%= row.email %></td>
+     <td><%= row.cno %></td>
+     <td><%= row.dob %></td>
+     <td><%= row.random %></td>
+   </tr>
+<% }) %>
+</thead>
+</table>
+</body>
+</html>
